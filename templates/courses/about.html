@@ -1,0 +1,55 @@
+{% extends "courses/base.html" %}
+{% load static %}
+{% block title %}About Us{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="text-center">
+        <h1 class="fw-bold">Welcome to <span class="text-primary">EduLearn</span></h1>
+        <p class="lead text-muted">Empowering Learning Through Seamless Course Management</p>
+    </div>
+
+    <div class="row mt-5 align-items-center">
+        <div class="col-md-6">
+            <img src="{% static 'img/def.jpg' %}" class="img-fluid rounded shadow-sm" alt="Learning">
+        </div>
+        <div class="col-md-6">
+            <h3 class="text-primary fw-bold">Our Mission</h3>
+            <p>
+                Our mission is to revolutionize online learning by providing an intuitive platform for students and instructors.
+                We make course enrollment smooth, efficient, and accessible for everyone.
+            </p>
+        </div>
+    </div>
+
+    <div class="row mt-5">
+        <div class="col-md-4 text-center">
+            <div class="p-4 shadow-sm rounded bg-light">
+                <i class="fas fa-book-open fa-3x text-primary"></i>
+                <h5 class="mt-3">Easy Course Enrollment</h5>
+                <p class="text-muted">Enroll in your desired courses effortlessly with just a few clicks.</p>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="p-4 shadow-sm rounded bg-light">
+                <i class="fas fa-user-graduate fa-3x text-primary"></i>
+                <h5 class="mt-3">Student Management</h5>
+                <p class="text-muted">A seamless system for tracking student progress and managing enrollments.</p>
+            </div>
+        </div>
+        <div class="col-md-4 text-center">
+            <div class="p-4 shadow-sm rounded bg-light">
+                <i class="fas fa-shield-alt fa-3x text-primary"></i>
+                <h5 class="mt-3">Secure & Efficient</h5>
+                <p class="text-muted">Your data is protected with top-tier security measures.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <h3 class="fw-bold text-primary">Get in Touch</h3>
+        <p class="text-muted">Have questions? Feel free to <a href="#" class="text-primary">contact us</a>. We'd love to hear from you!</p>
+        <a href="{% url 'course_list' %}" class="btn btn-primary btn-lg">Browse Courses</a>
+    </div>
+</div>
+{% endblock %}

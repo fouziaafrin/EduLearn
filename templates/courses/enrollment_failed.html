@@ -1,0 +1,11 @@
+{% extends "courses/base.html" %}
+{% block title %}Enrollment Failed{% endblock %}
+
+{% block content %}
+<div class="container mt-5 text-center">
+    <h2 class="text-danger">Enrollment Failed</h2>
+    <p>{{ error }}</p>
+    <a href="{% url 'enroll_student' %}" class="btn btn-primary">Back to Enroll</a>
+    <a href="{% url 'course_list' %}" class="btn btn-primary">Browse Courses</a>
+</div>
+{% endblock %}

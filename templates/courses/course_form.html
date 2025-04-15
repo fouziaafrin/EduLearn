@@ -1,0 +1,44 @@
+{% extends "courses/base.html" %}
+
+{% block title %}Add a New Course{% endblock %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Add a New Course</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <form method="post" enctype="multipart/form-data" class="p-4 border rounded bg-white shadow-sm">
+                {% csrf_token %}
+                <div class="mb-3">
+                    {{ form.as_p }}
+                </div>
+                <button type="submit" class="btn btn-success w-100 py-2">Save Course</button>
+            </form>
+            <div class="text-center mt-3">
+                <a href="{% url 'course_list' %}" class="btn btn-secondary">Back to Courses</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+
+
+{% comment %} {% extends "courses/base.html" %}
+{% block title %}{{course.id|default:"Create"}} Course{% endblock %} 
+{% block content %}
+<div class="container mt-4">
+  <h2>{{ course.id|default:"Create" }} Course</h2>
+  <form
+    method="post"
+    enctype="multipart/form-data"
+    class="p-4 border rounded bg-white shadow-sm"
+  >
+    {% csrf_token %} {{ form.as_p }}
+    <button type="submit" class="btn btn-success w-100">Save Course</button>
+  </form>
+  <a href="{% url 'course_list' %}" class="btn btn-secondary mt-3">Back to Courses</a
+  >
+</div>
+{% endblock %} {% endcomment %}
